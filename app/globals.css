@@ -3,47 +3,25 @@
 @tailwind utilities;
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 160 84% 39%;
+  --background: #FAFAF7;
+  --foreground: #1C1C1C;
 }
 
 body {
-  color: #1e293b;
-  background-color: #f8fafc;
-  font-feature-settings: "rlig" 1, "calt" 1;
+  color: #1C1C1C;
+  background: #FAFAF7;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
-/* Custom scrollbars */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
-}
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 9999px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+/* Custom transitions and scrollbar */
+* {
+  box-sizing: border-box;
 }
 
-/* Pulse radar ring */
-@keyframes ping-radar {
-  0% {
-    transform: scale(0.6);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1.6);
-    opacity: 0;
-  }
-}
-
-.radar-ring {
-  animation: ping-radar 2.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+::selection {
+  background-color: #EBF5F0;
+  color: #1D5C3A;
 }

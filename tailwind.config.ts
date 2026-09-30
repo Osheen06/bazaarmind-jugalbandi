@@ -6,59 +6,54 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "#0F766E", // Emerald/Teal deep agricultural green
-          50: "#F0FDF4",
-          100: "#DCFCE7",
-          200: "#BBF7D0",
-          300: "#86EFAC",
-          400: "#4ADE80",
-          500: "#10B981",
-          600: "#059669",
-          700: "#047857",
-          800: "#065F46",
-          900: "#064E3B",
-          foreground: "#ffffff",
+        forest: {
+          DEFAULT: "#1D5C3A",
+          dark: "#144229",
+          hover: "#16462C",
+          light: "#EBF5F0",
+          50: "#F2F8F4",
+          100: "#E3EFE8",
+          200: "#C4DFD1",
+          600: "#1D5C3A",
+          700: "#16462C",
+          800: "#103421",
         },
-        harvest: {
-          amber: "#F59E0B",
-          gold: "#D97706",
-          warm: "#FEF3C7",
-          orange: "#EA580C",
+        ivory: {
+          DEFAULT: "#FAFAF7",
+          dark: "#F4F4EE",
         },
-        surface: {
-          50: "#F8FAFC",
-          100: "#F1F5F9",
-          200: "#E2E8F0",
-          800: "#1E293B",
-          900: "#0F172A",
-        }
+        charcoal: {
+          DEFAULT: "#1C1C1C",
+          light: "#2E2E2E",
+        },
+        mutedText: "#6B7280",
+        borderGray: "#E5E7EB",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+        mono: ["JetBrains Mono", "Courier New", "Menlo", "monospace"],
       },
       keyframes: {
-        pulseRadar: {
-          "0%": { transform: "scale(0.8)", opacity: "0.8" },
-          "100%": { transform: "scale(2.2)", opacity: "0" },
+        pulseDot: {
+          "0%, 100%": { opacity: "1", transform: "scale(1)" },
+          "50%": { opacity: "0.4", transform: "scale(1.2)" },
         },
-        float: {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-6px)" },
+        slideUp: {
+          "0%": { opacity: "0", transform: "translateY(16px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         }
       },
       animation: {
-        "radar-ping": "pulseRadar 3s cubic-bezier(0, 0, 0.2, 1) infinite",
-        "float-slow": "float 5s ease-in-out infinite",
+        "pulse-dot": "pulseDot 1.5s ease-in-out infinite",
+        "slide-up": "slideUp 0.5s ease-out forwards",
+        "fade-in": "fadeIn 0.4s ease-out forwards",
       }
     },
   },
